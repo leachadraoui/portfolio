@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
             images: ["img/AUBeFriends (2).png"],
             description: "AUBeFRIENDS is a mobile application aimed at connecting students within AUB.",
             skills: ["Flutter", "Frontend Development", "Team Leadership"],
-            figma: "https://www.figma.com/your-figma-link",
+            figma: "",
             website: ""
         },
         "bunbar": {
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
             images: ["img/AlWadi.jpg"],
             description: "During my internship at Born Interactive, I developed the frontend of Al Wadi's, transforming Figma designs into a responsive and interactive user interface using clean and efficient code.",
             skills: ["Frontend Development", "HTML5", "CSS3", "jQuery"],
-            figma: "https://www.figma.com/design/Bl3cY8laO1Z7VmS0fXlxNt/Bunbar?node-id=0-1&t=Hjlg2aeBbQbpfSYm-1",
+            figma: "",
             website: ""
         },
          "anita": {
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
             images: ["img/books.png"],
             description: "During my internship at Born Interactive, I developed the frontend of Anita's website, transforming Figma designs into a responsive and interactive user interface using clean and efficient code.",
             skills: ["HTML", "CSS", "JavaScript"],
-            figma: "https://www.figma.com/design/Bl3cY8laO1Z7VmS0fXlxNt/Bunbar?node-id=0-1&t=Hjlg2aeBbQbpfSYm-1",
+            figma: "",
             website: ""
         },
          "smush": {
@@ -119,28 +119,41 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // Add event listeners to open modal
-    document.querySelectorAll(".open-modal").forEach(button => {
-        button.addEventListener("click", function (event) {
-            event.preventDefault();
-            const projectKey = this.getAttribute("data-project");
-            const project = projects[projectKey];
+document.querySelectorAll(".open-modal").forEach(button => {
+    button.addEventListener("click", function (event) {
+        event.preventDefault();
+        const projectKey = this.getAttribute("data-project");
+        const project = projects[projectKey];
 
-            // Update modal content
-            modalTitle.innerText = project.title;
-            modalImages.innerHTML = project.images.map(img => `<img src="${img}" alt="${project.title}">`).join("");
-            modalDescription.innerText = project.description;
+        // Update modal content
+        modalTitle.innerText = project.title;
+        modalImages.innerHTML = project.images.map(img => `<img src="${img}" alt="${project.title}">`).join("");
+        modalDescription.innerText = project.description;
 
-            // Update skills
-            modalSkills.innerHTML = project.skills.map(skill => `<li>${skill}</li>`).join("");
+        // Update skills
+        modalSkills.innerHTML = project.skills.map(skill => `<li>${skill}</li>`).join("");
 
-            // Update links
+        // Update Figma button
+        if (project.figma) {
+            modalFigma.style.display = "inline-block"; // Show button if link exists
             modalFigma.href = project.figma;
-            modalWebsite.href = project.website;
+        } else {
+            modalFigma.style.display = "none"; // Hide if there's no link
+        }
 
-            // Show modal
-            modal.style.display = "flex";
-        });
+        // Update Website button
+        if (project.website) {
+            modalWebsite.style.display = "inline-block"; // Show button if link exists
+            modalWebsite.href = project.website;
+        } else {
+            modalWebsite.style.display = "none"; // Hide if there's no link
+        }
+
+        // Show modal
+        modal.style.display = "flex";
     });
+});
+
 
     // Close modal on clicking close button
     closeModal.addEventListener("click", function () {
