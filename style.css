@@ -560,75 +560,75 @@ header.sticky{
 }
 
 /* Hover Colors */
-.ri-html5-line:hover {
+.skill-box:hover .ri-html5-line {
     color: #E34F26;
 }
 
-.ri-css3-line:hover {
+.skill-box:hover .ri-css3-line {
     color: #1572B6;
 }
 
-.ri-javascript-line:hover {
+.skill-box:hover .ri-javascript-line {
     color: #F7DF1E;
 }
 
-.ri-reactjs-line:hover {
+.skill-box:hover .ri-reactjs-line {
     color: #61DAFB;
 }
 
-.ri-nodejs-line:hover {
+.skill-box:hover .ri-nodejs-line {
     color: #68A063;
 }
 
-.bxl-python:hover {
+.skill-box:hover .bxl-python {
     color: #3776AB;
 }
 
-.ri-code-line:hover {
+.skill-box:hover .ri-code-line {
     color: #00599C;
 }
 
-.bxl-php:hover {
+.skill-box:hover .bxl-php {
     color: #777BB4;
 }
 
-.ri-code-box-line:hover {
+.skill-box:hover .ri-code-box-line {
     color: #512BD4;
 }
 
-.ri-android-line:hover {
+.skill-box:hover .ri-android-line {
     color: #62d358;
 }
 
-.ri-flutter-line:hover {
+.skill-box:hover .ri-flutter-line {
     color: #02569B;
 }
 
-.ri-braces-line:hover {
+.skill-box:hover .ri-braces-line {
     color: #E44D26;
 }
 
-.bxl-mongodb:hover {
+.skill-box:hover .bxl-mongodb {
     color: #47A248;
 }
 
-.bxl-git:hover {
+.skill-box:hover .bxl-git {
     color: #F05032;
 }
 
-.bxl-github:hover {
+.skill-box:hover .bxl-github {
     color: #ffffff;
 }
 
-.fa-jira:hover {
+.skill-box:hover .fa-jira {
     color: #0052CC;
 }
 
-.fa-database:hover {
+.skill-box:hover .fa-database {
     color: #4479A1;
 }
 
-.bxl-firebase:hover {
+.skill-box:hover .bxl-firebase {
     color: #FFCA28;
 }
 
@@ -1116,9 +1116,10 @@ a[href^="tel:"] {
     }
 
     form .submit-btn{
-        padding: 13px 27px;
+        padding: 12px 20px;
         width: 40%;
-        font-size: 13px;
+        font-size: 14px;
+        font-weight: 700;
     }
 
     .languages-container{
@@ -1130,7 +1131,7 @@ a[href^="tel:"] {
 @media (max-width: 800px) {
     .home {
         background: var(--bg-color);
-        height: 80vh;
+        height: 90vh;
     }
 
     .home-text{
@@ -1281,4 +1282,7 @@ a[href^="tel:"] {
         font-size: smaller;
     }
 
+    .submit-btn{
+        margin-top: 5px;
+    }
 }
