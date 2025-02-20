@@ -1130,7 +1130,7 @@ a[href^="tel:"] {
 @media (max-width: 800px) {
     .home {
         background: var(--bg-color);
-        height: 70vh;
+        height: 80vh;
     }
 
     .home-text{
@@ -1169,6 +1169,13 @@ a[href^="tel:"] {
         font-size: 1.5rem;
         padding: 10px;
         color: white;
+    }
+
+    header{
+        background-color: var(--bg-color);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        transition: background 0.3s ease;
     }
 
     .box-text h5{
@@ -1259,6 +1266,19 @@ a[href^="tel:"] {
 
     .contact{
         padding: 2rem 1rem;
+    }
+    
+    .contact-form{
+        margin-top: -20px;
+    }
+
+    .copyright{
+        margin-left: 70px;
+    }
+    
+    .copyright p{
+        text-align: center;
+        font-size: smaller;
     }
 
 }
