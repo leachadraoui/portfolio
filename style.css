@@ -482,17 +482,16 @@ header.sticky{
 }
 
 .skill-tag {
-    font-size: 16px;
-    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 1rem;
     color: var(--text-color);
-    background: var(--bg-color);
-    padding: 12px 22px;
-    border-radius: 25px;
-    border: 2px solid transparent;
-    background-clip: padding-box;
-    position: relative;
-    z-index: 1;
-    transition: all 0.3s ease;
+    background:
+        linear-gradient(var(--bg-color), var(--bg-color)) padding-box,
+        linear-gradient(135deg, #e1bac5, var(--main-color)) border-box;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 6px;
 }
 
 .skill-tag::before {
@@ -1079,16 +1078,16 @@ a[href^="tel:"] {
 }
 
 .skill-tag {
-    background: var(--bg-color);
-    color: var(--text-color);
     padding: 10px 20px;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 25px;
-    border: 2px solid transparent;
-    position: relative;
-    z-index: 1;
-    transition: all 0.3s ease;
+    font-size: 1rem;
+    color: var(--text-color);
+    background:
+        linear-gradient(var(--bg-color), var(--bg-color)) padding-box,
+        linear-gradient(135deg, #e1bac5, var(--main-color)) border-box;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 6px;
 }
 
 .skill-tag::before {
