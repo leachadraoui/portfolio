@@ -409,7 +409,7 @@ header.sticky{
     gap: 2rem;
 }
 
-.box {
+/* .box {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -460,7 +460,60 @@ header.sticky{
     border-bottom: 2px solid transparent;
     border-image: linear-gradient(135deg, var(--main-color) 0%, #e1bac5 100%);
     border-image-slice: 1;
+} */
+
+/* --- Technical Skills Section (Enhanced) --- */
+.technical-skills {
+    background-color: var(--bg-color);
+    padding: 4rem 3rem;
+    text-align: start;
 }
+
+.technical-skills .languages-header {
+    margin-bottom: 30px;
+}
+
+.technical-skills .skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.skill-tag {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+    background: var(--bg-color);
+    padding: 12px 22px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.skill-tag::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 25px;
+    padding: 2px;
+    background: linear-gradient(135deg, #e1bac5, var(--main-color));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    transition: all 0.4s ease;
+}
+
+.skill-tag:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 12px rgba(232, 194, 255, 0.3);
+}
+
 
 /* Programming Skills Section */
 .programming-skills .box-icon i {
@@ -492,7 +545,7 @@ header.sticky{
 
 .languages-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 30px;
@@ -508,6 +561,7 @@ header.sticky{
     flex: 1;
     min-width: 400px;
     text-align: center;
+    align-items: center;
 }
 
 .category {
@@ -654,7 +708,7 @@ header.sticky{
 
 .portfolio-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
@@ -665,13 +719,13 @@ header.sticky{
     overflow: hidden;
     transition: all 0.7s ease;
     position: relative;
-    height: 400px;
+    height:280px;
     width: 100%;
 }
 
 .row-img {
     width: 100%;
-    height: 300px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -703,12 +757,12 @@ header.sticky{
 }
 
 .row-left h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
+    font-size: 16px;
+    margin-bottom: 4px;
 }
 
 .row-left h6 {
-    font-size: 14px;
+    font-size: 12px;
     color: var(--ann-color);
 }
 
@@ -987,6 +1041,105 @@ a[href^="tel:"] {
     color:var(--bg-color);
     border-radius: 1.7rem;
     font-size: 22px;
+}
+
+/* --- Project Page Carousel --- */
+.project-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+}
+
+.project-carousel::-webkit-scrollbar {
+    display: none;
+    /* Chrome */
+}
+
+.project-carousel img {
+    height: 300px;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+}
+
+.project-carousel img:hover {
+    transform: scale(1.03);
+}
+
+/* --- Skill Tags (already added before, improved for consistency) --- */
+.skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.skill-tag {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.skill-tag::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 25px;
+    padding: 2px;
+    background: linear-gradient(135deg, #e1bac5, var(--main-color));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    transition: all 0.4s ease;
+}
+
+.skill-tag:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(232, 194, 255, 0.3);
+}
+
+/* Optional button tweaks */
+.btn1,
+.btn2 {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 17px;
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+
+.btn1 {
+    background: transparent;
+    border: 1px solid var(--alt-color);
+    color: var(--text-color);
+}
+
+.btn1:hover {
+    letter-spacing: 1px;
+    background-color: var(--second-bg-color);
+}
+
+.btn2 {
+    background: linear-gradient(135deg, #e1bac5 0%, var(--main-color) 100%);
+    color: var(--bg-color);
+}
+
+.btn2:hover {
+    transform: scale(1.05);
 }
 
 @media(max-width: 1580px){
