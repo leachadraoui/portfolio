@@ -634,6 +634,10 @@ header.sticky{
     color: #68A063;
 }
 
+.skill-box:hover .ri-java-line {
+    color: #5e90e1;
+}
+
 .skill-box:hover .bxl-python {
     color: #3776AB;
 }

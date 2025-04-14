@@ -29,7 +29,7 @@ document.addEventListener("click", (event) => {
 });
 
 var typed = new Typed(".input", {
-    strings: ["Web Designer.", "Web Developer.", "App Developer"],
+    strings: ["Web Designer.", "App Developer.", "Photographer."],
     typeSpeed: 140,
     backSpeed: 70,
     loop: true,
